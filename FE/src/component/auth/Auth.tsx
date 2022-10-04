@@ -1,9 +1,9 @@
-import React, { useEffect, useMemo } from 'react';
+import React from 'react';
 import Button from 'antd/lib/button';
 import Form from 'antd/lib/form';
 import Input from 'antd/lib/input';
 import Tabs from 'antd/lib/tabs';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 
