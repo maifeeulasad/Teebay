@@ -8,8 +8,18 @@ type User {
   password: String!
 }
 
+type Product {
+  productId: String!
+  name: String!
+  details: String!
+  price: Int!
+  owner: User!
+  productTypes: [String!]
+}
+
 type Query {
   login(createUserInput: CreateUserInput!): [String!]!
+  product(id: Int!): Product!
 }
 
 input CreateUserInput {
@@ -19,4 +29,18 @@ input CreateUserInput {
 
 type Mutation {
   signup(createUserInput: CreateUserInput!): User!
+  createProduct(createProductInput: CreateProductInput!): Product!
+  updateProduct(updateProductInput: UpdateProductInput!): Product!
+  removeProduct(id: Int!): Product!
+}
+
+input CreateProductInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateProductInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
 }
